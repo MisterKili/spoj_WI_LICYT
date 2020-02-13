@@ -1,0 +1,6 @@
+\\vcn.ds.volvo.net\cli-hm\hm1163\a334911\my documents\visual studio 2015\Projects\spoj_WI_LICYT\spoj_WI_LICYT\bin\Debug\spoj_WI_LICYT.exe.config
+\\vcn.ds.volvo.net\cli-hm\hm1163\a334911\my documents\visual studio 2015\Projects\spoj_WI_LICYT\spoj_WI_LICYT\bin\Debug\spoj_WI_LICYT.exe
+\\vcn.ds.volvo.net\cli-hm\hm1163\a334911\my documents\visual studio 2015\Projects\spoj_WI_LICYT\spoj_WI_LICYT\bin\Debug\spoj_WI_LICYT.pdb
+\\vcn.ds.volvo.net\cli-hm\hm1163\a334911\my documents\visual studio 2015\Projects\spoj_WI_LICYT\spoj_WI_LICYT\obj\Debug\spoj_WI_LICYT.csprojResolveAssemblyReference.cache
+\\vcn.ds.volvo.net\cli-hm\hm1163\a334911\my documents\visual studio 2015\Projects\spoj_WI_LICYT\spoj_WI_LICYT\obj\Debug\spoj_WI_LICYT.exe
+\\vcn.ds.volvo.net\cli-hm\hm1163\a334911\my documents\visual studio 2015\Projects\spoj_WI_LICYT\spoj_WI_LICYT\obj\Debug\spoj_WI_LICYT.pdb
