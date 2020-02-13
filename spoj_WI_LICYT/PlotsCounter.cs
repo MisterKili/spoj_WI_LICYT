@@ -35,8 +35,6 @@ namespace spoj_WI_LICYT
             int rowNumber;
             int numberOfColumns = Auction.numberOfPlotsInRow;
 
-            //third commit
-
             rowNumber = numberOfColumns * y + x + 1;
 
             return rowNumber;
