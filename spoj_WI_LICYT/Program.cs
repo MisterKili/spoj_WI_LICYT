@@ -13,12 +13,20 @@ namespace spoj_WI_LICYT
             //ReaderWriter reader = new ReaderWriter();
             //reader.Read();
             Auction auction = new Auction(5);
-            PlotsCounter pc = new PlotsCounter();
-            int plotNumber = 9;
+            Bid b1 = new Bid(1, "123", 12);
+            Bid b2 = new Bid(1, "123", 10);
 
-            Console.WriteLine("X: " + pc.GetColumnNumber(plotNumber));
-            Console.WriteLine("Y: " + pc.GetRowNumber(plotNumber));
-            Console.WriteLine("Plot numb: " + pc.GetPlotNumber(pc.GetColumnNumber(plotNumber), pc.GetRowNumber(plotNumber)));
+            
+
+            Offer o = new Offer("12341", 1, 21, 10);
+            auction.Bid(o);
+
+            Offer o2 = new Offer("12341", 7, 13, 9);
+            auction.Bid(o2);
+            Offer o3 = new Offer("12341", 11, 12, 11);
+            auction.Bid(o3);
+            auction.SetBid(b1);
+            auction.PrintHighestBids();
         }
     }
 }

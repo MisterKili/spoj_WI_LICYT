@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace spoj_WI_LICYT
 {
-    class ReaderWriter
+    class Reader
     {
         public Auction Read()
         {
@@ -15,7 +15,7 @@ namespace spoj_WI_LICYT
             Auction auction = new Auction(numberOfPlots);
 
             string line;
-            Offer bid;
+            Offer offer;
             string[] splittedLine;
             int price, upperLeft, lowerRight;
             while ((line = Console.ReadLine()) != null && line != "")
@@ -24,8 +24,8 @@ namespace spoj_WI_LICYT
                 Int32.TryParse(splittedLine[1], out upperLeft);
                 Int32.TryParse(splittedLine[2], out lowerRight);
                 Int32.TryParse(splittedLine[3], out price);
-                bid = new Offer(splittedLine[0], upperLeft, lowerRight, price);
-                auction.Bid(bid);
+                offer = new Offer(splittedLine[0], upperLeft, lowerRight, price);
+                auction.Bid(offer);
             }
 
             return auction;

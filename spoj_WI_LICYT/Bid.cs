@@ -8,9 +8,9 @@ namespace spoj_WI_LICYT
 {
     class Bid
     {
-        int plotNumber;
-        string pesel;
-        int price;
+        public int plotNumber;
+        protected string pesel;
+        public int price;
 
         public Bid(int plotNumber)
         {
@@ -22,6 +22,17 @@ namespace spoj_WI_LICYT
             this.plotNumber = plotNumber;
             this.pesel = pesel;
             this.price = price;
+        }
+
+        public Bid(string pesel, int price)
+        {
+            this.pesel = pesel;
+            this.price = price;
+        }
+
+        override public string ToString()
+        {
+            return plotNumber + " " + pesel + " " + price;
         }
     }
 }
