@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace spoj_WI_LICYT
 {
-    class Reader
+    class ReaderWriter
     {
         public Auction Read()
         {
@@ -26,9 +26,21 @@ namespace spoj_WI_LICYT
                 Int32.TryParse(splittedLine[3], out price);
                 offer = new Offer(splittedLine[0], upperLeft, lowerRight, price);
                 auction.Bid(offer);
+                Console.WriteLine(splittedLine[0]);
+                auction.PrintHighestBids();
             }
 
             return auction;
+        }
+
+        public void WriteResult(Auction auction)
+        {
+            Console.WriteLine("Wyniki:");
+            List<Buyer> winners = auction.GetBuyers();
+            foreach (Buyer b in winners)
+            {
+                Console.WriteLine(b);
+            }
         }
     }
 }

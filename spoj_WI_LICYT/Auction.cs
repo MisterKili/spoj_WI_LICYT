@@ -24,7 +24,6 @@ namespace spoj_WI_LICYT
             highestBids[columnNumber, rowNumber] = bid;
         }
 
-        //test
         public void Bid(Offer offer)
         {
             List<Bid> bids = offer.GetListOfBids();
@@ -50,9 +49,62 @@ namespace spoj_WI_LICYT
             return false;
         }
 
-        public void CloseAuction()
+        public List<Buyer> GetBuyers()
         {
+            List<Buyer> winners = new List<Buyer>();
+            PrintHighestBids();
+            foreach (Bid bid in highestBids)
+            {
+                if (bid != null)
+                {
+                    if (winners.Count == 0)
+                    {
+                        Buyer newBuyer = new Buyer(bid.GetPesel());
+                        newBuyer.AddFinalBid(bid);
+                        winners.Add(newBuyer);
+                    }
+                    else
+                    {
 
+                        string peselFromBid = bid.GetPesel();
+
+                        int i = 0;
+                        bool added = false;
+                        while (i < winners.Count && !added)
+                        {
+                            Buyer buyer = winners[i];
+                            if (bid.GetPesel().Equals(buyer.GetPesel()))
+                            {
+                                buyer.AddFinalBid(bid);
+                                added = true;
+                            }
+                            i++;
+                        }
+                        if (!added)
+                        {
+                            Buyer newBuyer = new Buyer(bid.GetPesel());
+                            newBuyer.AddFinalBid(bid);
+                            winners.Add(newBuyer);
+                        }
+                    }
+                }
+            }
+            SortBuyers(ref winners);
+            return winners;
+        }
+
+        private void SortBuyersBids(List<Buyer> winners)
+        {
+            foreach (Buyer buyer in winners)
+            {
+                buyer.SortBids();
+            }
+        }
+
+        public void SortBuyers(ref List<Buyer> winners)
+        {
+            winners = winners.OrderBy(o => o.GetPesel()).ToList();
+            //SortBuyersBids(winners);
         }
 
         public void PrintHighestBids()

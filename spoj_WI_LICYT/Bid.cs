@@ -30,6 +30,11 @@ namespace spoj_WI_LICYT
             this.price = price;
         }
 
+        public string GetPesel()
+        {
+            return pesel;
+        }
+
         override public string ToString()
         {
             return plotNumber + " " + pesel + " " + price;
